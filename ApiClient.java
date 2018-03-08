@@ -10,7 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ApiClient {
 
     public static final String base_url = "http://helper.org.in/new/apis/";
-    String url="https://pixabay.com/api/?";
     public static Retrofit retrofit = null;
 
     public static Retrofit getApiClient() {

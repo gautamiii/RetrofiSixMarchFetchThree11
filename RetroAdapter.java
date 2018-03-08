@@ -21,7 +21,7 @@ import java.util.List;
 public class RetroAdapter extends RecyclerView.Adapter<RetroAdapter.MyVieHolder>{
 
     Context context;
-     List<Service> modulelist;
+     private List<Service> modulelist;
 
     public RetroAdapter( Context context,List<Service> modulelist) {
         this.modulelist=modulelist;
@@ -50,9 +50,9 @@ public class RetroAdapter extends RecyclerView.Adapter<RetroAdapter.MyVieHolder>
         //holder.mImage.setImageResource(mService.getThumbnails());
         String SERVICE_ICON_BASE_URL = "http://helper.org.in/new/assets/images/app/icons/";
 //            Glide.with(context).load(SERVICE_ICON_BASE_URL).into(holder.mImage);
-        Picasso.with(context).load(SERVICE_ICON_BASE_URL).placeholder(R.drawable.ic_launcher_background).into(holder.mImage);
+        Picasso.with(context).load(SERVICE_ICON_BASE_URL+mService.getIcon()).placeholder(R.drawable.ic_launcher_background).into(holder.mImage);
         String SERVICE_THUMBNAIL_BASE_URL = "http://helper.org.in/new/assets/images/app/thumbnails/";
-        Glide.with(context).load(SERVICE_THUMBNAIL_BASE_URL)
+        Glide.with(context).load(SERVICE_THUMBNAIL_BASE_URL+mService.getThumbnails())
                .placeholder(R.drawable.ic_launcher_background)
                .into(holder.mThumbnailImage);
 //        holder.mThumbnail.setText(mService.getThumbnails());

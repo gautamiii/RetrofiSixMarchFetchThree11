@@ -22,7 +22,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 public class MainActivity extends AppCompatActivity {
-    List<Service> modulelist;
+    private List<Service> modulelist;
     private RecyclerView mrecyclerView;
     private RetroAdapter mAdapter;
     ApiInterface apiInterface;

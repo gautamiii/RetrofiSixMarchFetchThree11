@@ -1,5 +1,6 @@
 package com.example.gautam.retrofisixmarchfetch;
 
+import com.example.gautam.retrofisixmarchfetch.responsebean.PicsStyleClass;
 import com.example.gautam.retrofisixmarchfetch.responsebean.Responsebean;
 
 import retrofit2.Call;
@@ -18,5 +19,5 @@ public interface ApiInterface {
     Call<Responsebean> getData();
 
     @GET("key=8290648-8c086abda29e0376fd377dd86&q=yellow+flowers&image_type=photo&pretty=true")
-    Call<> getdata1();
+    Call<PicsStyleClass> getdata1();
 }
